@@ -1,0 +1,68 @@
+body{
+  margin: 0;
+  background: MintCream;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 5px;
+}
+#discountContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  height: auto;
+  background-size: 100%;
+  background: url("/conteoDeClientes/img/fondoAgua.jpeg");
+  padding: 1px;
+  display: flex;
+  justify-content: left;
+  border-radius:4px ;
+}
+
+h1{
+  margin: 10px;
+  font-family: 'Lobster', cursive;
+  font-size: 45px;
+  color:WhiteSmoke;
+  -webkit-text-stroke:.1px rgb(13, 87, 13);
+}
+
+h2{
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+}
+button{
+  margin: 15px;
+  height: auto;
+  width: 30vw;
+  border-radius: 5px;
+  border-color: DarkTurquoise;
+  background:Turquoise;
+  color: white;
+}
+
+.button1{
+  display: flex;
+  justify-content: flex-end;
+}
+.button2{
+  display: flex;
+  justify-content: flex-end;
+}
+
+p{
+  font-family: 'Yantramanav', sans-serif;
+}
+
+label{
+  font-family: 'Yantramanav', sans-serif;
+}
+input{
+  border-color: aqua;
+}
+

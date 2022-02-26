@@ -5,17 +5,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="styles/index.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yantramanav&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>MARANDUA</h1>
-  <P>Valor de entrada: $10.000</P>
-  <section>
-    <label for="NumeroDeClientes">Número de clientes</label>
-    <input id="numeroDeClientes">
-    <input type="submit">
-    <label>
-      <input type="checkbox" name="descuento"> ¿Con descuento?
-    </label>
-  </section>
+  <header>  
+    <h1>MARANDUA</h1>
+  </header>
+  <div class="container">
+    <h2>💧 Valor de entrada: $10.000 💧</h2>
+    <label for="clientsCount">⭐Número de clientes:</label>
+    <input type="text" id="clientsCount" name="clientsCount">
+    <br>
+    <div>
+      <input type="checkbox" id="discountCheckbox" name="discountCheckbox">
+      <label for="discountCheckbox">¿Con descuento?</label>
+      <div id="discountContainer"></div>
+    </div>
+    <div class="button1">
+      <button id="totalButton">¿cuanto es?</button>
+    </div>
+    <p>Valor total:<span id="totalDisplay"></span></p>
+    <label for="getPay">⭐recibe:</label>
+    <input type="text" id="getPay" name="getPay">
+    <div class="button2">
+      <button id="changeButton">¿cuanto devuelvo?</button>
+    </div>
+    <p>cambio:<span id="totalChange"></span></p>
+  </div>
+<script src="index.js"></script>
 </body>
 </html>
