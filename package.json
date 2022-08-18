@@ -1,0 +1,28 @@
+{
+  "name": "conteodeclientes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenviela/conteoDeClientes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenviela/conteoDeClientes/issues"
+  },
+  "homepage": "https://github.com/kenviela/conteoDeClientes#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "knex": "^2.2.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.16",
+    "pug": "^3.0.2"
+  }
+}

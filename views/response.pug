@@ -1,0 +1,18 @@
+extends layout
+block body 
+  p Valor total:
+    span#totalDisplay $#{valueEntrance}
+  
+  if !change
+    form(action="/change" method="post")
+      label(for="getPay") ⭐recibe:
+      input(type="text" id="getPay" name="getPay")
+      input(type="hidden" value=valueEntrance name="valueEntrance")
+      .button2 
+        button#changeButton(type="submit") ¿cuanto devuelvo?
+
+  p cambio:
+    span#totalChange $#{change}
+
+  a(href="/") 
+    button Agregar nueva entrada
