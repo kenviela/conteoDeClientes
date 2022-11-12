@@ -1,0 +1,15 @@
+extends ../dashboardLayout
+block dashboardContent 
+  .container
+    h2 💧 Valor de entrada: $#{price} 💧
+    form.container(action="/dashboard/entries" method="post") 
+      label(for="people") ⭐ Número de clientes:
+      input(type="text" id="people" name="people")
+      br
+      label(for="discount") ⭐ Descuento:
+      input(type="text" id="discount" name="discount")
+      br
+      .button1
+        button#totalButton ¿cuanto es?
+
+  //script(src="index.js")

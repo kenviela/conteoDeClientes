@@ -1,0 +1,13 @@
+extends ../../dashboardLayout
+block dashboardContent
+  h1 Agregar producto 
+  form.container(action="/dashboard/inventory/products", method="post")
+    label(for="name") Nombre del producto
+    input(type="text", name="name") 
+    br
+    label(for="price") Precio del producto
+    input(type="number", name="price") 
+    br
+    .button1
+      button#totalButton Agregar
+

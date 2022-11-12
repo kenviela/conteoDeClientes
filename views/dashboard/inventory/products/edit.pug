@@ -1,0 +1,13 @@
+extends ../../dashboardLayout
+block dashboardContent
+  h1 Editar producto #{name} 
+
+  form.container(action=`/dashboard/inventory/products/${id}?_method=PUT`, method="POST")
+    label(for="name") Nombre nuevo
+    input(type="text", name="name", value=`${name}`)
+    br
+    label(for="price") Precio nuevo
+    input(type="number", name="price", value=`${price}`)
+    br
+    .button1
+      button Editar 

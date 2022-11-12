@@ -14,14 +14,35 @@ body{
   flex-direction: column;
 }
 
+.mainContainer{
+  display: grid;
+  grid-template-columns: 117px 1fr;
+}
+
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
 header{
   height: auto;
   background-size: 100%;
-  background: url("/conteoDeClientes/img/fondoAgua.jpeg");
+  background: url("/img/fondoAgua.jpeg");
   padding: 1px;
   display: flex;
-  justify-content: left;
-  border-radius:4px ;
+  justify-content: end;
+  font-family:'Yantramanav', sans-serif;
+}
+.menu{
+  list-style: none;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #000;
+  font-family:'Yantramanav', sans-serif;
 }
 
 h1{

@@ -1,15 +1,7 @@
 extends layout
 block body 
-  .container
-    h2 💧 Valor de entrada: $#{price} 💧
-    form.container(action="/" method="post") 
-      label(for="clientsCount") ⭐ Número de clientes:
-      input(type="text" id="clientsCount" name="clientsCount")
-      br
-      label(for="discountEntrance") ⭐ Descuento:
-      input(type="text" id="discountEntrance" name="discountEntrance")
-      br
-      .button1
-        button#totalButton ¿cuanto es?
-
-  //script(src="index.js")
+  h1 Marandua
+  form(action="/login" method="post")
+    label(for="user") ¿Quién eres?
+    input(type="text" id="user" name="user")
+    button(type="submit") entrar

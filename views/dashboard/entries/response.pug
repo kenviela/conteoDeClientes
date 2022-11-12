@@ -1,0 +1,18 @@
+extends ../dashboardLayout
+block dashboardContent
+  p Valor total:
+    span#totalDisplay $#{price}
+  
+  if !change
+    form(action="/dashboard/entries/change" method="post")
+      label(for="pay") ⭐recibe:
+      input(type="text" id="pay" name="pay")
+      input(type="hidden" value=id name="id")
+      .button2 
+        button#changeButton(type="submit") ¿cuanto devuelvo?
+
+  p cambio:
+    span#totalChange $#{change}
+
+  a(href="/dashboard/entries/new") 
+    button Agregar nueva entrada

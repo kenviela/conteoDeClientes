@@ -1,0 +1,14 @@
+extends ../layout
+block body 
+  div(class="mainContainer")
+
+    div(class="menu") 
+      a(href="/dashboard") Dashboard
+      a(href="/dashboard/entries/new") Entradas
+      a(href="/dashboard/inventory") Inventario
+      a(href="/dashboard/users") Usuarios
+    div
+      div(class="header") 
+        header 
+          h4 Dani 
+      block dashboardContent

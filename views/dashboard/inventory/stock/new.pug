@@ -1,0 +1,11 @@
+extends ../../dashboardLayout
+block dashboardContent
+
+  h1 Stock #{product.name}
+
+  form.container(action=`/dashboard/inventory/stock/${product.id}`, method="post") 
+    label(for="amount") Aumentar stock
+    input(type="number", name="amount")
+    br
+    .button1
+      button#totalButton Agregar

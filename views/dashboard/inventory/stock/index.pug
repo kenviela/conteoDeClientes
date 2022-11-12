@@ -1,0 +1,17 @@
+extends ../../dashboardLayout
+block dashboardContent
+  h1 Stock
+  
+  table
+    thead
+      tr
+        th Nombre del producto
+        th Cantidad
+    tbody
+      each product in stock 
+        tr 
+          td= product.name 
+          td= +product.amount
+          td
+            a(href=`/dashboard/inventory/stock/${product.idProduct}`)
+              button +
