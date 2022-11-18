@@ -1,5 +1,16 @@
 //Donde se va a pintar
 const snacksContainer = document.getElementById("snacksContainer");
+const addSnackButton = document.getElementById("addSnackButton");
+const finishTotal = document.getElementById("finishTotal");
+
+let indexRow = 1;
+let products = [];
+addSnackButton.addEventListener("click", () => {
+  const addRow = createPriceRow(products, indexRow);
+  snacksContainer.appendChild(addRow);
+  indexRow++;
+});
+
 // Que elementos vamos a pintar
 // const select = document.createElement("select");
 // const option = document.createElement("option");
@@ -91,11 +102,13 @@ const createPriceRow = (products, index) => {
       return Product.id == id;
     });
     calculatePrice({ newPriceProduct: product.price });
+    calculateFinalTotal();
   });
   const AmountInput = createAmountInput();
   AmountInput.addEventListener("change", (event) => {
     const amount = event.target.value;
     calculatePrice({ newAmountProducts: amount });
+    calculateFinalTotal();
   });
   const priceIndicator = createPriceIndicator(price, index);
   div.appendChild(select);
@@ -103,6 +116,20 @@ const createPriceRow = (products, index) => {
   div.appendChild(priceIndicator);
   return div;
 };
+
+const calculateFinalTotal = () => {
+  let total = 0;
+  const allTotals = document.querySelectorAll("input[name='total']");
+  console.log(allTotals);
+  for (let value = 0; value < allTotals.length; value++) {
+    const element = allTotals[value];
+    let totalValue = parseInt(element.value, 10);
+    total += totalValue;
+  }
+  console.log(total);
+  finishTotal.setAttribute("value", total);
+};
+
 //Como se van a pintar los elementos
 //Que pasará después de usar los elementos
 //test
@@ -110,11 +137,8 @@ const createPriceRow = (products, index) => {
   const response = await fetch("/dashboard/inventory/products/get-all");
   const data = await response.json();
   console.log(data);
-  const products = data.products;
+  products = data.products;
   const priceRow = createPriceRow(products, 0);
-  const rowOne = createPriceRow(products, 1);
-  const rowTwo = createPriceRow(products, 2);
+
   snacksContainer.appendChild(priceRow);
-  snacksContainer.appendChild(rowOne);
-  snacksContainer.appendChild(rowTwo);
 })();
